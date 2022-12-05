@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot-test tutorial test2 1`] = `
+<div>
+  <h1>
+    Hello, Jest!
+  </h1>
+</div>
+`;
