@@ -1,4 +1,6 @@
-React + CSS Modules + jest開発環境テンプレート
+~~React + CSS Modules + jest開発環境テンプレート~~
+
+React + TypeScript開発環境テンプレート
 
 実装
 
@@ -39,6 +41,14 @@ resolve: {
 ```
 
 未実装
+
+・tsx環境のテスト
+
+jestでのtsxファイルのテストは未検証
+
+・CSS Modules
+
+TypeScriptで動かすには、CSS Modulesの型定義情報を用意する必要あり
 
 ・CSS Modulesのテスト
 
