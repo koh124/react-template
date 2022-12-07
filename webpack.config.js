@@ -8,9 +8,14 @@ const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: "./src/js/client.js",
+  mode: debug ? 'development' : 'production',
+  entry: './src/js/client.tsx',
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader'
+      },
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
@@ -38,6 +43,9 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
   },
   output: {
     path: __dirname + "/public/",
