@@ -2,6 +2,10 @@ import renderer from 'react-test-renderer';
 import Test from '../components/Test';
 import React from 'react';
 
+test('check', () => {
+  console.log('OK');
+})
+
 // 一般的なjestのテスト
 describe('test tutorial', () => {
   test('test1', () => {
@@ -18,3 +22,4 @@ describe('snapshot-test tutorial', () => {
     expect(tree).toMatchSnapshot();
   })
 })
+
