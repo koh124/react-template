@@ -38,6 +38,31 @@ resolve: {
 },
 ```
 
+・Jest
+
+パッケージをインストール
+```
+// jsだけならJestのみでテストできる
+// ts-jestはJestをTypeScriptに対応させるもの
+// @types/jestはJestのAPIの型定義ファイル
+$ npm install jest ts-jest @types/jest
+```
+
+Jestの設定ファイルを作る
+```
+// jest.config.jsを生成する
+// JestでTypescriptをテストできるようにする設定ファイル
+$ yarn ts-jest config:init
+```
+
+__test__ディレクトリの中にあるか、*.test.tsがテストファイルの命名規則
+
+テストを実行する
+```
+$ npm test
+```
+
+
 未実装
 
 ・tsx環境のテスト
