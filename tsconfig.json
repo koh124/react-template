@@ -1,5 +1,13 @@
 {
+  "include": ["src", "types", "declaration.d.ts"],
   "compilerOptions": {
+    // "sourceMap": true,
+    // "resolveJsonModule": true,
+    // "experimentalDecorators": true,
+    // "lib": [
+    //   "dom",
+    //   "es6"
+    // ],
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */

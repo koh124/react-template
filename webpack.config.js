@@ -1,4 +1,5 @@
 const debug = process.env.NODE_ENV !== 'production';
+// eslint-disable-next-line no-unused-vars
 const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -18,7 +19,7 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /node_modules/,
         use: [{
           loader: 'babel-loader',
           options: {
@@ -28,7 +29,7 @@ module.exports = {
         }]
       },
       {
-        test: /\.css$/,
+        test: /\.(css|scss|sass)$/,
         use: [
           // "style-loader", // index.htmlにcssを書き込む場合
           {
@@ -40,17 +41,17 @@ module.exports = {
               modules: true
             }
           },
+          'sass-loader'
         ]
       }
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.css', '.scss', '.sass']
   },
   output: {
-    path: __dirname + "/public/",
+    path: path.resolve(__dirname, "public/"),
     filename: "client.min.js", // jsの出力先のファイル名
-    publicPath: '/'
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -68,7 +69,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     static: {
-      directory: path.join(__dirname, '/public/') // staticファイルの置き場所
+      directory: path.resolve(__dirname, 'public/') // staticファイルの置き場所
     }
   }
 };

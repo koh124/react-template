@@ -1,6 +1,4 @@
-~~React + CSS Modules + jest開発環境テンプレート~~
-
-React + TypeScript開発環境テンプレート
+React + TypeScript + CSS Modules + ESLint + jest開発環境テンプレート
 
 実装
 
