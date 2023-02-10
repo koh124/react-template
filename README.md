@@ -44,10 +44,6 @@ resolve: {
 
 jestでのtsxファイルのテストは未検証
 
-・CSS Modules
-
-TypeScriptで動かすには、CSS Modulesの型定義情報を用意する必要あり
-
 ・CSS Modulesのテスト
 
-・ESLint, Prettier
+・Prettier
